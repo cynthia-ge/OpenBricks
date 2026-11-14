@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.coverage
+coverage.json
+*.egg-info/
+*.db
+.env
+artifacts/
+
+# Java build output
+target/
+
+# SQLite write-ahead logs and journals
+*.db-*

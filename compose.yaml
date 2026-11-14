@@ -1,0 +1,14 @@
+services:
+  app:
+    build: .
+    ports: ["127.0.0.1:8095:8080"]
+    environment:
+      TOKENS: ${TOKENS:?Set TOKENS to a JSON map of local credentials}
+    volumes: ["data:/data"]
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "--silent", "http://localhost:8080/healthz"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+volumes:
+  data:

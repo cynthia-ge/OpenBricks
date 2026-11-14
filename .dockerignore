@@ -1,0 +1,8 @@
+.git
+.env*
+.venv
+target
+artifacts
+*.db
+*.db-*
+__pycache__
